@@ -1,0 +1,1314 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.prelanding {
+  background-color: #001F3F; 
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.prelanding .logo-prelanding {
+  width: 150px;
+}
+
+.prelanding h1 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.prelanding p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.vertical-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #001F3F; 
+  width: 200px;
+  height: 100%;
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: none;
+}
+
+.vertical-nav .logo-nav {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.vertical-nav h5,
+.vertical-nav p {
+  text-align: center;
+  margin: 0;
+}
+
+.vertical-nav .nav-links a {
+  display: block;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.vertical-nav .nav-links a:hover {
+  background-color: #005b80;
+}
+
+.vertical-nav .nav-links {
+  position: absolute;
+  bottom: 20px;
+}
+
+
+.poetic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 50px 50px;
+  background-color: #ffffff;
+}
+
+.poetic-text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.poetic-text p {
+  margin: 10px 0;
+}
+
+.poetic-text .stanza-grey {
+  color: grey;
+}
+
+.poetic-text .stanza-black {
+  color: black;
+}
+
+.poetic-image {
+  flex: 1;
+}
+
+.poetic-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.section {
+  padding: 50px;
+  background-color: #f8f8f8;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+
+.library-left .button {
+  background-color: #003366;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+}
+
+.library-left .button:hover {
+  background-color: #005b80;
+}
+
+.library-left .coming-soon {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.contact-info {
+  width: 45%;
+  float: left;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.form-container {
+  width: 45%;
+  float: right;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form input,
+.form-container form select,
+.form-container form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container form button {
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.form-container form button:hover {
+  background-color: #005b80;
+}
+
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+
+.input-row input,
+.input-row select {
+  flex: 1;
+}
+
+.partition-line {
+  border-left: 2px solid black;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+
+@media (max-width: 768px) {
+  .poetic {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .poetic-image,
+  .poetic-text {
+    margin-bottom: 20px;
+  }
+
+  .section {
+    padding: 30px;
+  }
+
+  .library-left .button {
+    font-size: 1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-info,
+  .form-container {
+    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+.poetic-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 20px;
+}
+
+.poetic-text {
+    margin-right: 20px;
+    max-width: 50%; }
+
+.poetic-image {
+    max-width: 50%; 
+}
+
+.poetic-text p.stanza-grey {
+    color: grey;
+}
+
+.poetic-text p.stanza-black {
+    color: black;
+}
+
+
+.move-text-right {
+    margin-left: 1000px; 
+    margin-right: 0; 
+}
+.poetic-container {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    padding: 20px;
+    height: 100vh; 
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.poetic-text {
+    margin-left: 300px; 
+    font-size: 1.2em; 
+    margin-top: -80px; 
+    max-width: 50%; 
+    line-height: 1.5; 
+}
+
+.poetic-image {
+    max-width: 50%; 
+}
+
+.poetic-text p.stanza-grey {
+    color: grey;
+}
+
+.poetic-text p.stanza-black {
+    color: black;
+}
+
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 10;
+  display: none;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; 
+    z-index: 10;
+}
+
+.horizontal-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.horizontal-nav ul li {
+    margin: 10px 20px;
+}
+
+.horizontal-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;  
+    padding: 10px 15px;
+}
+
+.horizontal-nav ul li a:hover {
+    background-color: #555; 
+    border-radius: 5px;
+}
+
+.horizontal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003366; 
+    padding: 10px 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo-text h2, .logo-text p {
+    margin: 0;
+    color: white;
+    font-family: Raleway, sans-serif;
+}
+
+.logo-text h2 {
+    font-size: 1.2em;
+    margin-bottom: 0;
+}
+
+.logo-text p {
+    font-size: 1em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Raleway, sans-serif;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.vertical-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #001F3F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    display: none; 
+}
+
+.vertical-nav .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vertical-nav .logo {
+    width: 80px; 
+    margin-bottom: 10px;
+}
+
+.vertical-nav .logo-text {
+    text-align: center;
+    color: white;
+    font-family: Raleway, sans-serif;
+}
+
+.vertical-nav .nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+
+.vertical-nav .nav-links li {
+    margin: 5px 0;
+}
+
+
+.vertical-nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Raleway, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.vertical-nav .nav-links a:hover {
+    color: #FFD700; 
+}
+#library {
+    background-image: url('librarybg.jpg');
+    background-size: cover; 
+    background-position: center;
+    height: 100vh; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+#library .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    margin-left: 20px; 
+}
+
+#library .nav-links a {
+    display: block;
+    width: 200px; 
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0; 
+    border-radius: 5px; 
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#library .nav-links a:hover {
+    background-color: black;
+    color: white;
+}
+
+#library .coming-soon {
+    color: white;
+    font-size: 14px;
+    font-style: italic;
+    margin-left: 20px; 
+    margin-top: 20px;
+}
+html {
+  scroll-padding-top: 49px; 
+}
+.horizontal-nav {
+    display: none;
+}
+.advocacy-section {
+  padding: 100px 80px 150px;
+  background-color: white;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  text-align: left; 
+  line-height: 1.9; 
+  max-width: 2500px;
+  margin: 0 auto;
+  width: 100%; 
+}
+
+.advocacy-section h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.advocacy-section p {
+  margin-bottom: 30px;
+}
+
+.advocacy-section ol {
+  margin: 20px 100px 30px 25px;
+  padding-left: 20px;
+}
+
+.advocacy-section li {
+  margin-bottom: 20px;
+  line-height: 1.9;
+}
+.aboutme-section {
+  padding: 100px 80px 150px;
+  background-color: white;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
+  text-align: left; 
+  line-height: 1.9; 
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.aboutme-section h2 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.aboutme-section p {
+  margin-bottom: 50px;
+  font-size: 0.8em;
+}
+
+.aboutme-section ol {
+  margin: 20px 0 30px 25px;
+  padding-left: 20px;
+}
+
+.aboutme-section li {
+  margin-bottom: 20px;
+  line-height: 1.9;
+}
+.gallery-section {
+  padding: 100px 80px;
+  background-color: white;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+
+.full-screen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.full-screen-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  transform: scale(3); 
+}
+
+
+.reach-out-section {
+    padding: 80px 60px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.reach-out-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.reach-out-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-info {
+    width: 45%;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact-form {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #003366;
+}
+.prelanding .home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.prelanding .home-content .clickable-area {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.prelanding .home-content .clickable-area img {
+  cursor: pointer;
+}
+
+.prelanding .home-content .clickable-area h1,
+.prelanding .home-content .clickable-area p {
+  cursor: pointer;
+}
+
+section {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;  
+    line-height: 1.8; 
+    color: #333;
+    text-align: left;
+    margin: 40px auto;
+}
+
+section p {
+    margin-bottom: 35px;
+}
+
+section ol {
+    margin-left: 20px;
+}
+
+section ol li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+section h2, section h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+section h3 {
+    margin-top: 30px;
+}
+
+#aboutme, #advocacy {
+    width: 75%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.poetic-content {
+  max-width: 1000px; 
+  margin-left: calc(10% - 70px); 
+  line-height: 1.8;
+}
+.library-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px; 
+}
+
+.library-buttons button {
+  width: max-content;
+  min-width: 280px; 
+  padding: 12px 24px;
+  background-color: white;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.library-buttons button:hover {
+  background-color: #f0f0f0;
+}
+.reach-out-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.contact-form-title {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-family: Raleway, sans-serif;
+  color: #1c3d5a;
+  margin: 0;
+}
+
+.contact-info {
+  width: 30%;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-form {
+  width: 60%;
+}
+
+.partition-line {
+  width: 2px;
+  background-color: #1c3d5a;
+  height: 100%;
+  position: absolute;
+  left: 38%;
+  top: 0;
+}
+
+.name-fields,
+.contact-fields {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  padding: 12px 20px;
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #1c3d5a;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #163048;
+}
+.contact-form-title {
+  position: absolute;
+  top: -450px; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-family: Raleway, sans-serif;
+  color: #1c3d5a; 
+  margin: 0;
+}
+
+.partition-line {
+  width: 2px;
+  background-color: #001F3F; 
+  height: 100%;
+  position: absolute;
+  left: 38%;
+  top: 0;
+}
+.reachout-section {
+  background-color: #f5f5f5;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.reachout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.contact-info {
+  flex: 1;
+  padding-right: 40px;
+  font-family: Raleway, sans-serif;
+}
+
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #001F3F;
+}
+
+.partition-line {
+  width: 2px;
+  background-color: #001F3F;
+  height: 100%;
+  position: absolute;
+  left: 38%;
+  top: 0;
+}
+
+.contact-form-wrapper {
+  flex: 1;
+  padding-left: 60px;
+  position: relative;
+}
+
+.contact-form-title {
+  position: absolute;
+  top: -450px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  font-family: Raleway, sans-serif;
+  color: #001F3F;
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Raleway, sans-serif;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.name-fields input {
+  flex: 1;
+}
+
+.phone-email-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phone-input {
+  display: flex;
+  gap: 10px;
+}
+
+.phone-input select,
+.phone-input input,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  background-color: #001F3F;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #003366;
+}
+#reach-out {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    width: 35%;
+    padding-right: 40px;
+    font-family: Raleway, sans-serif;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #001F3F;
+}
+
+.partition-line {
+    width: 2px;
+    background-color: #001F3F; 
+    height: 100%;
+    position: absolute;
+    left: 38%;
+    top: 0;
+}
+
+.form-container {
+    width: 60%;
+    padding-left: 60px;
+}
+
+.form-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #1c3d5a;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #1c3d5a;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #163048;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.poetic-text p {
+  font-family: 'Playfair Display', serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.aboutme-text p,
+.advocacy-text p {
+  font-family: 'Playfair Display', serif;
+}
+.aboutme-text,
+.aboutme-text * {
+  font-family: 'Playfair Display', serif !important;
+}
+
+.advocacy-text,
+.advocacy-text * {
+  font-family: 'Playfair Display', serif !important;
+}
+
+.horizontal-nav .right-logo img {
+  width: 50px;
+  height: auto;
+}
+.horizontal-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #001F3F;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: Raleway, sans-serif;
+  height: 80px; 
+}
+
+.horizontal-nav .left-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.horizontal-nav .left-logo img {
+  height: 80px;
+  width: auto;
+}
+
+.horizontal-nav .nav-items {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.horizontal-nav .nav-items a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.horizontal-nav .nav-items a:hover {
+  color: #CCCCCC;
+}
+
+.horizontal-nav .right-logo {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.horizontal-nav .right-logo img {
+  width: 75px;
+  height: auto;
+}
+.horizontal-nav .left-logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 10px;
+}
+
+.horizontal-nav .left-logo img {
+  height: 70px;
+  width: auto;
+}
+
+.horizontal-nav .logo-text h5,
+.horizontal-nav .logo-text p {
+  margin: 0;
+  color: white;
+  font-family: Raleway, sans-serif;
+  line-height: 1.2;
+}
+
+.horizontal-nav .logo-text h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.horizontal-nav .logo-text p {
+  font-size: 12px;
+  font-weight: 400;
+}
+.contact-info a[href*="linkedin"] { margin-top: 125px; display: inline-block; }{ margin-left: 100px; display: inline-block; }
+.contact-info .social-icons {
+    margin-top: 15px;
+}
+
+.contact-info .social-icons a {
+    margin-right: 25px;
+    display: inline-block;
+}
+
+.contact-info .social-icons img {
+    width: 45px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.contact-info .social-icons img:hover {
+    transform: scale(1.1);
+}
+.contact-info .social-icons { margin-left: 30px; }
+#gallery h2 { text-align: left; }{ font-family: 'Playfair Display', serif; }
+#library button { font-family: 'Playfair Display', serif; }
+#core-expertise, #commitment-to-healthcare { font-family: 'Raleway', sans-serif; }
+.horizontal-nav { display: none; }
+#reach-out .contact-info img[alt$="Icon"] {
+  position: relative;
+  top: 1px;
+  vertical-align: middle;
+}
+#reach-out .contact-info span {
+  margin-left: 10px;
+}
+#reach-out,
+#reach-out * {
+  font-family: 'Playfair Display', serif;
+}
+.library-menu button { font-family: 'Playfair Display', serif; }
+section {
+  scroll-margin-top: 15px;
+}
+html {
+  scroll-behavior: smooth;
+}
+#reach-out .contact-info > img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 15px;
+    position: relative;
+    top: 0px; 
+}
+
+#reach-out .contact-info > span {
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+#reach-out .contact-info span {
+    position: relative;
+    top: 8.5px;
+}
+.horizontal-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #001F3F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.horizontal-left {
+  position: absolute;
+  left: 0; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px; 
+}
+
+.horizontal-man {
+  height: 50px;
+  margin-right: 30px;
+}
+
+.horizontal-logo {
+  height: 40px;
+}
+
+.horizontal-links {
+  display: flex;
+  gap: 40px;
+}
+
+.horizontal-links a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.horizontal-links a:hover {
+  color: #007BFF;
+}
+
+.partition-line {
+  left: 30%; 
+}
