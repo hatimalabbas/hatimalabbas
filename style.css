@@ -1378,3 +1378,99 @@ html {
     margin: 5px 0;
   }
 }
+@media (max-width: 768px) {
+
+  /* Make nav bar stack neatly on smaller screens */
+  .horizontal-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .horizontal-nav .nav-logo {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .horizontal-nav .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .horizontal-nav .nav-buttons button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  /* Poetic Section - stack text and image */
+  .poetic-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .poetic-section img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+
+  /* About Me, Advocacy - just center things */
+  .aboutme-section,
+  .advocacy-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Gallery - single column */
+  .gallery-section .gallery-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Library - make menu vertical */
+  .library-section .library-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .library-section .library-menu button {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  /* Reach Out - stack info and form */
+  .reachout-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 90%;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+
+  /* Contact Form fields */
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .contact-form .submit-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* Better spacing overall */
+  section {
+    padding: 40px 20px;
+  }
+
+}
