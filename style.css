@@ -1312,3 +1312,69 @@ html {
 .partition-line {
   left: 30%; 
 }
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .horizontal-nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .horizontal-nav .nav-logo img {
+    margin-left: 0;
+    width: 60px;
+  }
+
+  .horizontal-nav .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .poetic-section,
+  .aboutme-section,
+  .advocacy-section,
+  .library-section,
+  .gallery-section,
+  .reachout-section {
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .poetic-section img,
+  .gallery-section img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .reachout-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 90%;
+  }
+
+  .vertical-divider {
+    display: none;
+  }
+
+  .library-section .library-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .library-section .library-menu button {
+    width: 80%;
+    margin: 5px 0;
+  }
+}
