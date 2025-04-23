@@ -1312,165 +1312,550 @@ html {
 .partition-line {
   left: 30%; 
 }
+/* Hide vertical nav bar on screens smaller than 768px */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  .horizontal-nav {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .horizontal-nav .nav-logo img {
-    margin-left: 0;
-    width: 60px;
-  }
-
-  .horizontal-nav .nav-buttons {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .poetic-section,
-  .aboutme-section,
-  .advocacy-section,
-  .library-section,
-  .gallery-section,
-  .reachout-section {
-    padding: 20px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .poetic-section img,
-  .gallery-section img {
-    max-width: 90%;
-    height: auto;
-  }
-
-  .reachout-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-info,
-  .contact-form {
-    width: 90%;
-  }
-
-  .vertical-divider {
-    display: none;
-  }
-
-  .library-section .library-menu {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .library-section .library-menu button {
-    width: 80%;
-    margin: 5px 0;
+  .vertical-nav {
+    display: none !important;
   }
 }
 @media (max-width: 768px) {
-
-  /* Make nav bar stack neatly on smaller screens */
-  .horizontal-nav {
+  .poetic {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-  }
-
-  .horizontal-nav .nav-logo {
-    margin-bottom: 10px;
     text-align: center;
+    padding: 20px;
   }
 
-  .horizontal-nav .nav-buttons {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 0;
-  }
-
-  .horizontal-nav .nav-buttons button {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-
-  /* Poetic Section - stack text and image */
-  .poetic-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .poetic-section img {
+  .poetic .text-content {
     max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .poetic img {
+    width: 80%;
     margin-top: 20px;
   }
+}
+/* Ensure the horizontal navigation bar is visible */
+.horizontal-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Adjust the color as needed */
+    padding: 10px;
+    position: relative;
+}
 
-  /* About Me, Advocacy - just center things */
-  .aboutme-section,
-  .advocacy-section {
+/* Initially hide links and show the dropdown */
+.nav-links {
+    display: none;
+    justify-content: center;
+}
+
+/* Style the dropdown button */
+.nav-dropdown {
+    display: inline-block;
+    font-size: 16px;
+    padding: 8px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Dropdown styling for mobile */
+    .nav-dropdown {
+        display: inline-block;
+        width: 200px;
+        margin-top: 10px;
+    }
+
+    .nav-dropdown option {
+        padding: 8px;
+    }
+}
+/* Poetic Section Styles */
+.poetic {
+    display: flex;
+    justify-content: space-between; /* Ensures content is spaced properly */
+    align-items: center; /* Vertically centers content */
     padding: 20px;
+    background-color: #fff;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.poetic .text {
+    max-width: 70%; /* Increased width */
+    margin-right: -120px; /* Centers the text */
+    text-align: left; /* Centers the text */
+    padding: 20px;
+}
+
+.poetic .text p {
+    color: #333;
+    font-size: 1.2em; /* Adjust font size if necessary */
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.poetic .text p:first-child,
+.poetic .text p:nth-child(2) {
+    color: grey; /* Styling for first two paragraphs */
+}
+
+.poetic .text p:nth-child(3) {
+    color: black; /* 'Ahlan wa Sahlan' in black */
+}
+
+/* Man image styling */
+.poetic .image {
+    max-width: 30%; /* Adjust width of image */
+    display: block;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .poetic {
+        flex-direction: column; /* Stack text and image on mobile */
+        align-items: center;
+    }
+
+    .poetic .text {
+        max-width: 100%; /* Adjust width on mobile */
+        padding: 10px;
+    }
+
+    .poetic .image {
+        max-width: 80%; /* Adjust image width on mobile */
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+.horizontal-nav {
+  background-color: #0B1D3A; /* Same as pre-landing page */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: 'Raleway', sans-serif;
+  flex-wrap: wrap;
+}
+
+.left-logo, .right-logo {
+  display: flex;
+  align-items: center;
+}
+
+.left-logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo-text h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.nav-dropdown {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.right-logo img {
+  width: 60px;
+  height: auto;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .horizontal-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .right-logo {
+    margin-top: 10px;
+  }
+}
+/* Reach Out Section Base Styles */
+#reach-out {
+  padding: 60px 20px;
+  font-family: Raleway, sans-serif;
+}
+.reachout-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: wrap;  /* Allow for stacking in mobile view */
+}
+
+/* Info & Form Panels */
+.reachout-info,
+.reachout-form {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* Adjusted width for desktop */
+@media (min-width: 769px) {
+  .reachout-info,
+  .reachout-form {
+    max-width: 45%;  /* Makes the boxes thinner on desktop */
+  }
+}
+
+/* Heading Styles */
+.reachout-info h2,
+.reachout-form h2 {
+  margin-top: 0;
+  font-size: 2em;
+  color: #001F3F;
+}
+
+/* Icons */
+.reachout-info .icon {
+  vertical-align: middle;
+  width: 24px;
+  margin-right: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+.social-icons img {
+  width: 32px;
+  margin-right: 15px;
+  vertical-align: middle;
+  transition: transform .2s ease;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Form Fields */
+.form-group {
+  margin-bottom: 20px;
+}
+.name-fields,
+.phone-email-fields {
+  display: flex;
+  gap: 20px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.submit-btn {
+  background-color: #001F3F;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+.submit-btn:hover {
+  background-color: #003366;
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+  .reachout-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .reachout-info,
+  .reachout-form {
+    margin: 10px 0;
+    padding: 20px;
+  }
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 769px) {
+  .reachout-container {
+    flex-direction: row;
+  }
+  .reachout-info,
+  .reachout-form {
+    margin: 10px;
+    max-width: 45%;  /* Makes the boxes thinner */
+  }
+}
+/* Gallery Section Styles */
+.gallery-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.gallery-container {
+  display: grid;
+  gap: 20px;
+}
+
+/* Desktop Layout (2 rows, 3 columns) */
+@media (min-width: 769px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);     /* 2 rows */
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+}
+
+/* Mobile Layout (6 rows, 1 column) */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: 1fr;  /* 1 column */
+    grid-template-rows: repeat(6, 1fr);  /* 6 rows */
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;  /* Makes sure images are large and well-cropped */
+  }
+}
+/* Poetic Section Styles */
+.poetic {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.poetic-text {
+  flex: 1;
+  padding-right: 20px;
+  max-width: 60%;
+}
+
+.poetic-text p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.8;
+  word-wrap: break-word; /* Ensure the text wraps properly */
+  text-align: left; /* Align text to the left */
+}
+
+.stanza-grey {
+  color: grey;
+}
+
+.stanza-black {
+  color: black;
+  font-size: 24px; /* Larger font size for this paragraph */
+  font-weight: bold;
+}
+
+/* Image styling */
+.poetic-image {
+  flex: 1;
+  max-width: 40%;
+  padding-left: 20px;
+}
+
+.poetic-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .poetic {
+    flex-direction: column;
     text-align: center;
   }
 
-  /* Gallery - single column */
-  .gallery-section .gallery-images {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
+  .poetic-text {
+    max-width: 100%;
+    padding-right: 0;
+    text-align: left; /* Ensure text aligns properly */
+    padding-left: 10px; /* Added padding for mobile */
+    padding-right: 10px; /* Added padding for mobile */
   }
 
-  /* Library - make menu vertical */
-  .library-section .library-menu {
-    flex-direction: column;
-    align-items: center;
+  .poetic-image {
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 20px; /* Added padding for spacing */
   }
 
-  .library-section .library-menu button {
-    width: 80%;
-    margin-bottom: 10px;
+  .poetic-text p {
+    font-size: 16px; /* Slightly smaller font on mobile */
+    word-wrap: break-word; /* Ensures text wrapping on mobile */
+    line-height: 1.6;
   }
 
-  /* Reach Out - stack info and form */
-  .reachout-container {
-    flex-direction: column;
-    align-items: center;
+  .stanza-black {
+    font-size: 20px; /* Adjusted for mobile */
+  }
+}
+/* Mobile Layout Fix for Poetic Section */
+@media (max-width: 768px) {
+  .poetic {
+    display: block;         /* Stack elements */
+    padding: 30px 10px;     /* Comfortable gutters */
+    background-color: #f9f9f9;
   }
 
-  .contact-info,
-  .contact-form {
-    width: 90%;
+  .poetic-text {
+    width: 100%;            /* Full width of parent */
+    max-width: 500px;       /* Prevent overly wide text block */
+    margin: 0 auto;         /* Center the block */
+    padding: 0;             /* Remove extra side padding */
+    text-align: left;       /* Ensure left alignment of text */
   }
 
-  .vertical-divider {
+  .poetic-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .stanza-black {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .poetic-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;   /* Center the image under the text */
+    padding: 0;
+  }
+
+  .poetic-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+}
+#horizontal-nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #001F3F;
+  z-index: 9999;
+  display: none; /* start hidden */
+}
+/* Initially, hide the horizontal nav bar */
+#horizontal-nav-wrapper {
     display: none;
-  }
+}
 
-  /* Contact Form fields */
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
+/* Horizontal navigation styles */
+.horizontal-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
     width: 100%;
-    margin-bottom: 10px;
-  }
+    background-color: #; /* Match the blue color of the website */
+    z-index: 100;
+    transition: top 0.3s ease-in-out;
+    color: white; /* Ensure text is visible against the blue background */
+}
 
-  .contact-form .submit-button {
-    width: 100%;
-    padding: 12px;
-  }
+/* Horizontal nav logo styling */
+.horizontal-nav .left-logo img,
+.horizontal-nav .right-logo img {
+    max-width: 50px; /* Adjust logo size */
+}
 
-  /* Better spacing overall */
-  section {
-    padding: 40px 20px;
-  }
+/* Mobile responsive adjustments */
+@media only screen and (max-width: 768px) {
+    #horizontal-nav-wrapper {
+        display: block !important; /* Ensure it overrides other styles */
+    }
 
+    .horizontal-nav {
+        font-size: 14px; /* Adjust font size for mobile */
+        padding: 10px;
+    }
+
+    .nav-dropdown {
+        width: 100%; /* Make the dropdown more mobile-friendly */
+    }
+}
+/* Adjust the left logo */
+#left-logo {
+    padding-left: 10px; /* Moves it a little more to the left */
+    width: auto; /* Ensures it doesn't get stretched */
+    height: 50px; /* Adjust to the desired height */
+}
+
+/* Adjust the right logo */
+#right-logo {
+    margin-left: auto;
+    margin-right: 10px; /* This moves it slightly to the left */
+    height: 40px; /* Adjust this as needed */
 }
